@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutoCast.iml" filepath="$PROJECT_DIR$/AutoCast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/me.kyllian.autocast.iml" filepath="$PROJECT_DIR$/me.kyllian.autocast.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,51 @@
+name: AutoCast
+description: Did someone say customization?
+main: me.kyllian.autocast.AutoCastPlugin
+version: 3.5
+
+commands:
+  autocast:
+    description: Base command of the autocast plugin
+    usage: /<command>
+    aliases: [ac]
+  broadcast:
+    description: Broadcast command of AutoCast
+    usage: /<command>
+    aliases: [bc, say]
+
+permissions:
+  autocast.*:
+    description: Gives access to all AutoCast commands
+    children:
+      autocast.reload: true
+      autocast.switchmode: true
+      autocast.force: true
+      autocast.hideandshow: true
+      autocast.broadcast: true
+      autocast.update: true
+      autocast.order: true
+      autocast.create: true
+  autocast.reload:
+    description: Permission to reload the AutoCast plugin
+    default: false
+  autocast.switchmode:
+    description: Permission to switch modes of the plugin
+    default: false
+  autocast.force:
+    description: Permission to force a message
+    default: false
+  autocast.hideandshow:
+    description: Permission to either hide or show the automated messages
+    default: false
+  autocast.broadcast:
+    description: Permission to broadcast a message
+    default: false
+  autocast.update:
+    description: Permission to see the new updates
+    default: false
+  autocast.order:
+    description: Change order of the messages
+    default: false
+  autocast.create:
+    description: Enabled creating empty messages
+    default: false

@@ -1,0 +1,258 @@
+# messages.yml start
+#
+# Important links:
+# BarStyle: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarStyle.html
+# Sound: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html ! YOU CAN ALSO USE RANDOM AS A SOUND
+# BarColor: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html
+# ClickAction: https://ci.md-5.net/job/BungeeCord/ws/chat/target/apidocs/net/md_5/bungee/api/chat/ClickEvent.Action.html
+#
+# Important information:
+# In order to disable something, replace the list like:
+# Text:
+#   - 'Text here'
+# With
+# Text: []
+#
+# In order to create more message, you will need to copy paste the old message, and change it to your likings. If you wish to create an empty message.
+# execute the command /autocast create (name) and this will create an empty message for you.
+#
+# In order to create a proper book, you will need to use: https://minecraftjson.com/
+# Not sure how this works? Make sure to check out the plugin page for more information!
+#
+# In order to set the bossbar color change the first word with the color, followed by a semicolon:
+# COLOR;TEXT
+#
+# If it's somehow still unclear how to set up a proper message for your own server, don't hesitate to contact me.
+# You can PM me on Spigot: https://www.spigotmc.org/members/kyllian.31777/
+# Or join my discord server for further assistance: https://discord.gg/zgKr2YM
+#
+# In order to get multiple lines in a hover message, put \n in the place where you'd like a new line to begin
+# This also counts for the MOTD
+#
+# Enjoy <3
+
+
+
+PluginMessages:
+  InvalidArgument: '&8&oAutoCast: &7Invalid argument! Please do /autocast help!' # Message sent when the argument is invalid
+  Reloaded: '&8&oAutoCast: &7Reloaded plugin!' # Message sent when the plugin has been reloaded
+  NoPermissions: '&8&oAutoCast: &7You don''t have permissions!' # Message sent when you don't have permissions to execute a command
+  ForceSending: '&8&oAutoCast: &7Force sending message' # Message sent when you are force sending a message
+  SwitchedMode: '&8&oAutoCast: &7Automated messages are now %state%' # Message sent when either the player or admin switched the mode
+  MustBeAPlayer: '&8&oAutoCast: &7You must be a player in order to receive these messages' # Message sent when you must be a player
+  UnknownMessage: '&8&oAutoCast: &7The message you specified is unknown, Please use an existing message' # Message sent when the specified message is not known
+  BroadcastLayout: '&8&oAutoCast: &7%message%' # Default broadcast layout
+  CheckingUpdate: '&8&oAutoCast: &7Checking for update...'
+  UpdateFound: '&8&oAutoCast: &7New version found! You are currently running version %oldversion%, version %newversion% is ready to be downloaded on %url%'
+  UpdateNotFound: '&8&oAutoCast: &7You are up to date!'
+  ChangedOrderMessage: '&8&oAutoCast: &7Changed order to %order%'
+  MessageCreated: '&8&oAutoCast: &7Empty message has been created and is visible in the messages file!'
+  MessageExists: '&8&oAutoCast: &7The message you specified exists already!'
+
+MOTD:
+  Enabled: true
+  CustomSlot: 2019
+  PlayerKnown:
+    - '&7Welcome back %player_name%\n&7We just added survival!'
+    - '&7Welcome back %player_name%\n&7Creative just had an update!'
+  PlayerUnknown:
+    - '&7Welcome to AutoCast\n&7We have survival, please join!'
+    - '&7Hey, you''re new!\n&7Did you know we have playervaults?'
+
+Static: # Static actionbar/bossbar
+  UpdateTime: 20 # Time before the action/bossbar updates
+  ActionBar:
+    Enabled: true
+    Text:
+      - '&7Welcome to the server &8%player_name%&7!'
+      - '&7Welcome to the server &8%player_name%&7!'
+      - '&7Welcome to the server &8%player_name%&7!'
+      - '&7This server is running &8AutoCast&7!'
+      - '&7This server is running &8AutoCast&7!'
+      - '&7This server is running &8AutoCast&7!'
+      - '&7Your ping is &8%player_ping%&7!'
+      - '&7Your ping is &8%player_ping%&7!'
+      - '&7Your ping is &8%player_ping%&7!'
+  BossBar:
+    Enabled: true
+    BarStyle: SOLID
+    Text:
+      - 'WHITE;&8X: &7%player_x% &8Y: &7%player_y% &8Z: &7%player_z%'
+  Scoreboard:
+    Enabled: true
+    Animation:
+      1:
+        Header: '&8&oAutoCast'
+        Text:
+          - '&7Welcome %player_name%!'
+          - ' '
+          - '&8&oRAM: &7%server_ram_used%/%server_ram_total%MB'
+          - '&8&oOnline: &7%server_online%/%server_max_players%'
+          - ''
+          - '&8&oUnique joins: &7%server_unique_joins%'
+      2:
+        Header: '&7AutoCast'
+        Text:
+          - '&8&oWelcome %player_name%!'
+          - ' '
+          - '&7RAM: &8&o%server_ram_used%/%server_ram_total%MB'
+          - '&7Online: &8&o%server_online%/%server_max_players%'
+          - ''
+          - '&7Unique joins: &8&o%server_unique_joins%'
+  TabList:
+    Enabled: true
+    Animation:
+      1:
+        Header:
+          - '&8&oWelcome to AutoCast'
+          - '&7%player_name%!'
+        Footer:
+          - '&7%statistic_hours_played% hours played!'
+          - '&8&o%player_first_join_date% is when you first joined!'
+      2:
+        Header:
+          - '&7Welcome to AutoCast'
+          - '&8&o%player_name%!'
+        Footer:
+          - '&8&o%statistic_hours_played% hours played!'
+          - '&7%player_first_join_date% is when you first joined!'
+
+Messages:
+  SpawnEnter: # Message sent spawn enter
+    Text:
+      - '&8&oYou just entered the spawn area!'
+    ClickAction: OPEN_URL
+    Click: ''
+    HoverText: '&7You may find zombies here!'
+    Sound: 'NONE'
+    Permission: 'NONE'
+    Commands: []
+    Title:
+      - '&8&oSpawn;&7Not the safest place to be!'
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar: []
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages: []
+  OtherJoinMessage: # Message sent on join
+    Text:
+      - '&7----------------{ &8&lAutoCast &7}----------------'
+      - '&7Welcome to the server %player_name%!'
+      - '&7Make sure to vote today!'
+      - '&7Click on this message to join our discord!'
+      - '&7-----------------------------------------'
+    ClickAction: OPEN_URL
+    Click: 'https://discord.gg/zgKr2YM'
+    HoverText: '&7Click here to join the discord\n&7Don''t be scared'
+    Sound: 'RANDOM'
+    Permission: 'NONE'
+    Commands: []
+    Title: []
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar: []
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages:
+  FirstJoinMessage: # Message sent on first join
+    Text:
+      - '&7----------------{ &8&lAutoCast &7}----------------'
+      - '&7Welcome to the server %player_name%!'
+      - '&7Enjoy your stay!'
+      - '&7Click on this message to join our discord!'
+      - '&7-----------------------------------------'
+    ClickAction: OPEN_URL
+    Click: 'https://discord.gg/zgKr2YM'
+    HoverText: '&7Click here to join the discord'
+    Sound: 'NONE'
+    Permission: 'NONE'
+    Commands: []
+    Title: []
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar: []
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages:
+      - '["",{"text":"ServerName:","color":"gray","bold":true},{"text":"\nAutoCast welcomes you to the server %player_name%!","color":"gray","bold":false},{"text":"\nPlease read the whole book to gather information about the server!","color":"gray"}]'
+      - '["",{"text":"Rules:","color":"gray"},{"text":" Hover over them to see the consequences!","color":"gray","italic":true},{"text":"\n1. Do not swear!","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a 24 hour mute!","color":"red"}]}},"italic":false},{"text":"\n2. Do not grief","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a pernament ban!","color":"red"}]}}},{"text":"\n3. Do not spam","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, we will mute you for 2 hours","color":"red"}]}}}]'
+      - '["",{"text":"Info: ","color":"gray"},{"text":"\nWe just updated to 1.13","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"This means we now have new blocks!","color":"gray"}]}}},{"text":"\nWe recently installed AutoCast for a better server experience!","color":"gray","clickEvent":{"action":"open_url","value":"https://www.spigotmc.org/resources/autocast.43894/"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can also click on here to be redirected to their download page!","color":"gray"}]}}},{"text":"\nWe just created a new discord server!","color":"gray","clickEvent":{"action":"open_url","value":"https://discord.gg/zgKr2YM"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can join it by clicking on this message!","color":"gray"}]}}}]'
+  OtherJoinMessage: # Message sent on join
+    Text:
+      - '&7----------------{ &8&lAutoCast &7}----------------'
+      - '&7Welcome to the server %player_name%!'
+      - '&7Make sure to vote today!'
+      - '&7Click on this message to join our discord!'
+      - '&7-----------------------------------------'
+    ClickAction: OPEN_URL
+    Click: 'https://discord.gg/zgKr2YM'
+    HoverText: '&7Click here to join the discord\n&7Don''t be scared'
+    Sound: 'RANDOM'
+    Permission: 'NONE'
+    Commands: []
+    Title: []
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar: []
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages:
+      - '["",{"text":"ServerName:","color":"gray","bold":true},{"text":"\nAutoCast welcomes you back to the server %player_name%!","color":"gray","bold":false},{"text":"\nPlease read the whole book to gather information about the server!","color":"gray"}]'
+      - '["",{"text":"Rules:","color":"gray"},{"text":" Hover over them to see the consequences!","color":"gray","italic":true},{"text":"\n1. Do not swear!","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a 24 hour mute!","color":"red"}]}},"italic":false},{"text":"\n2. Do not grief","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a pernament ban!","color":"red"}]}}},{"text":"\n3. Do not spam","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, we will mute you for 2 hours","color":"red"}]}}}]'
+      - '["",{"text":"Info: ","color":"gray"},{"text":"\nWe just updated to 1.13","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"This means we now have new blocks!","color":"gray"}]}}},{"text":"\nWe recently installed AutoCast for a better server experience!","color":"gray","clickEvent":{"action":"open_url","value":"https://www.spigotmc.org/resources/autocast.43894/"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can also click on here to be redirected to their download page!","color":"gray"}]}}},{"text":"\nWe just created a new discord server!","color":"gray","clickEvent":{"action":"open_url","value":"https://discord.gg/zgKr2YM"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can join it by clicking on this message!","color":"gray"}]}}}]'
+  CreatorMessage:
+    Text:
+      - '&7----------------{ &8&lAutoCast &7}----------------'
+      - '&7Welcome to &8AutoCast&7! The best autobroadcasting plugin available on Spigot.'
+      - '&7This plugin has been made by &8Kyllian&7, you can check out his Spigot profile by clicking on this message.'
+      - '&7If you wish to get more help regarding the plugin, make sure you join the discord link stated in the help command'
+      - '&7-----------------------------------------'
+    ClickAction: OPEN_URL
+    Click: 'https://www.spigotmc.org/members/kyllian.31777/'
+    HoverText: '&7Click here to see his profile!'
+    Sound: 'NONE'
+    Permission: 'NONE'
+    Commands: []
+    Title:
+      - '&cTitle only; '
+      - ' ;&aSubtitle only'
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar:
+      - 'RED;&cBossbar one'
+      - 'GREEN;&cBossbar two'
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages: []
+  PlaceholderAPI:
+    Text:
+      - '&7----------------{ &8&lAutoCast &7}----------------'
+      - '&7Hey %player_name%, this plugin supports PlaceholderAPI'
+      - '&7Not sure what this is or how it works? Make sure to click on the message!'
+      - '&7It will take you to a site which explains it all!'
+      - '&7-----------------------------------------'
+    ClickAction: OPEN_URL
+    Click: 'https://www.spigotmc.org/wiki/placeholderapi/'
+    HoverText: '&7Don''t be scared to click me!'
+    Sound: 'NONE'
+    Permission: 'NONE'
+    Commands: []
+    Title:
+      - '&cTitle only; '
+      - ' ;&aSubtitle only'
+    TitleDuration: 10
+    ActionBar: []
+    ActionDuration: 10
+    BossBar:
+      - 'RED;&cBossbar one'
+      - 'GREEN;&cBossbar two'
+    BossStyle: SEGMENTED_6
+    BossDuration: 10
+    BookPages: []
+# messages.yml end

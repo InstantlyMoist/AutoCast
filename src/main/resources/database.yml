@@ -1,0 +1,6 @@
+host: 'localhost'
+port: 3306
+database: 'autocast'
+username: 'root'
+password: 'password'
+table: 'messages'

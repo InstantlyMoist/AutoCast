@@ -1,0 +1,32 @@
+# AutoCast
+#
+# Welcome to the newest version of AutoCast, the most customizable autobroadcast plugin for spigot. Perfect for all your needs!
+# It might take you some time to set it up, but once you take the effort. It will look amazing.
+#
+# If you somehow can't set it up or experience any performance related issues, don't hesitate to contact me on; https://discord.gg/zgKr2YM
+#
+# Important information:
+# BroadCastInterval will be in ticks, so if you wish to have 15 minutes of delay, do: 15 * 60 * 20, this will give you the amount of ticks.
+# Make sure you add the correct message name in the EnabledMessages list! It's cAsE sEnSiTivE
+#
+
+UpdateChecking: true
+
+MySQL: false
+
+BroadcastInterval: 18000
+
+RandomOrder: true
+
+MinimumPlayers: 1
+
+Log: true
+
+EnabledMessages: # Make sure you only add messages that you'd like to be broadcasted
+  - 'CreatorMessage'
+  - 'PlaceholderAPI'
+
+OnJoin:
+  SendMessage: true
+  ClearChat: true
+  DisableOther: true
