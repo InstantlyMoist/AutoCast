@@ -39,7 +39,7 @@ public class AutoCastPlugin extends JavaPlugin {
         fileHandler = new FileHandler(this);
         isMySQL = fileHandler.getConfigurationConfiguration().getBoolean("MySQL");
         if (isMySQL) mySQLHandler = new MySQLHandler(this);
-        updateChecker = new UpdateChecker(this, 43894);
+        updateChecker = new UpdateChecker(this, 64567);
         updateCheck = fileHandler.getConfigurationConfiguration().getBoolean("UpdateChecking");
         messageHandler = new MessageHandler(this);
         if (!Bukkit.getVersion().contains("1.7")) actionBar = new ActionBar(this);

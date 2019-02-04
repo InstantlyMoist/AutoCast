@@ -96,7 +96,7 @@ public class FileHandler {
     }
 
     public String getUpdateFoundMessage(String oldVersion, String newVersion) {
-        return MessageUtils.colorTranslate(messagesConfiguration.getString("PluginMessages.CheckingUpdate").replace("%oldversion%", oldVersion)
+        return MessageUtils.colorTranslate(messagesConfiguration.getString("PluginMessages.UpdateFound").replace("%oldversion%", oldVersion)
                 .replace("%newversion%", newVersion).replace("%url%", plugin.getUpdateChecker().getResourceURL()));
     }
 
