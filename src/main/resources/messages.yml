@@ -84,7 +84,8 @@ Static: # Static actionbar/bossbar
       1:
         Header: '&8&oAutoCast'
         Text:
-          - '&7Welcome %player_name%!'
+          - '&7Welcome,'
+          - '&7%player_name%!'
           - ' '
           - '&8&oRAM: &7%server_ram_used%/%server_ram_total%MB'
           - '&8&oOnline: &7%server_online%/%server_max_players%'
@@ -93,7 +94,8 @@ Static: # Static actionbar/bossbar
       2:
         Header: '&7AutoCast'
         Text:
-          - '&8&oWelcome %player_name%!'
+          - '&8&oWelcome,'
+          - '&8&o%player_name%!'
           - ' '
           - '&7RAM: &8&o%server_ram_used%/%server_ram_total%MB'
           - '&7Online: &8&o%server_online%/%server_max_players%'

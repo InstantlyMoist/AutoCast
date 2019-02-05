@@ -3,13 +3,11 @@ package me.kyllian.autocast;
 import me.kyllian.autocast.commands.AutoCastCommand;
 import me.kyllian.autocast.commands.BroadcastCommand;
 import me.kyllian.autocast.listeners.PlayerJoinListener;
-import me.kyllian.autocast.listeners.PlayerMoveListener;
 import me.kyllian.autocast.listeners.ServerPingListener;
 import me.kyllian.autocast.utils.*;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -53,7 +51,6 @@ public class AutoCastPlugin extends JavaPlugin {
 
         new PlayerJoinListener(this);
         new ServerPingListener(this);
-        //new PlayerMoveListener(this);
 
         Metrics metrics = new Metrics(this);
         metrics.addCustomChart(new Metrics.SingleLineChart("message_amount", new Callable<Integer>() {

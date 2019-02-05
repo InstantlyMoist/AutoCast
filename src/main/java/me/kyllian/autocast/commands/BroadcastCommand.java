@@ -52,9 +52,8 @@ public class BroadcastCommand implements CommandExecutor {
                         player.sendMessage(MessageUtils.prepareMessage(player, MessageUtils.prepareMessage(player, finalMessage)));
                     });
                 }
-
-                if (plugin.getMessageHandler().isLog()) Bukkit.getLogger().info(broadcastLayout.replace("%message%", stringBuilder.toString().trim()));
-
+                if (plugin.getMessageHandler().isLog())
+                    Bukkit.getLogger().info(broadcastLayout.replace("%message%", stringBuilder.toString().trim()));
                 return true;
             }
             sender.sendMessage(plugin.getFileHandler().getNoPermissionsMessage());
