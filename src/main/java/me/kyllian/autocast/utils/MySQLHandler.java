@@ -56,8 +56,7 @@ public class MySQLHandler {
                 Bukkit.getLogger().info("MySQL Database connected!");
 
                 PreparedStatement createDatabase = connection.prepareStatement("CREATE TABLE IF NOT EXISTS " + this.table
-                + " (id INT AUTO_INCREMENT NOT NULL,"
-                + "  MessageName TEXT,"
+                + " (MessageName TEXT,"
                 + "  MessageText TEXT,"
                 + "  ClickAction TEXT,"
                 + "  Click TEXT,"
@@ -73,7 +72,7 @@ public class MySQLHandler {
                 + "  BossStyle TEXT,"
                 + "  BossDuration INTEGER,"
                 + "  BookPages TEXT,"
-                + "  primary key (id))");
+                + "  primary key (MessageName))");
                 createDatabase.executeUpdate();
                 createDatabase.close();
 
