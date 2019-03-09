@@ -87,20 +87,20 @@ Static: # Static actionbar/bossbar
           - '&7Welcome,'
           - '&7%player_name%!'
           - ' '
-          - '&8&oRAM: &7%server_ram_used%/%server_ram_total%MB'
-          - '&8&oOnline: &7%server_online%/%server_max_players%'
+          - '&8&oRAM: UNKNOWN' # &7%server_ram_used%/%server_ram_total%MB
+          - '&8&oOnline: UNKNOWN' # &7%server_online%/%server_max_players%
           - ''
-          - '&8&oUnique joins: &7%server_unique_joins%'
+          - '&8&oUnique joins: UNKNOWN' # &7%server_unique_joins%
       2:
         Header: '&7AutoCast'
         Text:
           - '&8&oWelcome,'
           - '&8&o%player_name%!'
           - ' '
-          - '&7RAM: &8&o%server_ram_used%/%server_ram_total%MB'
-          - '&7Online: &8&o%server_online%/%server_max_players%'
+          - '&7RAM: UNKNOWN' # &8&o%server_ram_used%/%server_ram_total%MB
+          - '&7Online: UNKNOWN' # &8&o%server_online%/%server_max_players%
           - ''
-          - '&7Unique joins: &8&o%server_unique_joins%'
+          - '&7Unique joins: UNKNOWN' # &8&o%server_unique_joins%
   TabList:
     Enabled: true
     Animation:
