@@ -20,22 +20,22 @@ public class TabList {
 
     public void sendTabList(Player player, String headerText, String footerText) {
         try {
-            Object header = getNmsClass("ChatComponentText").getConstructor(new Class[] { String.class }).newInstance(new Object[] { MessageUtils.prepareMessage(player, headerText) });
-            Object footer = getNmsClass("ChatComponentText").getConstructor(new Class[] { String.class }).newInstance(new Object[] { MessageUtils.prepareMessage(player, footerText) });
+            Object header = getNmsClass("ChatComponentText").getConstructor(new Class[]{String.class}).newInstance(new Object[]{MessageUtils.prepareMessage(player, headerText)});
+            Object footer = getNmsClass("ChatComponentText").getConstructor(new Class[]{String.class}).newInstance(new Object[]{MessageUtils.prepareMessage(player, footerText)});
 
             Object ppoplhf = getNmsClass("PacketPlayOutPlayerListHeaderFooter").getConstructor(new Class[0]).newInstance(new Object[0]);
 
-            Field fa = ppoplhf.getClass().getDeclaredField("a");
+            Field fa = Bukkit.getVersion().contains("1.13") ? ppoplhf.getClass().getDeclaredField("header") : ppoplhf.getClass().getDeclaredField("a");
             fa.setAccessible(true);
             fa.set(ppoplhf, header);
-            Field fb = ppoplhf.getClass().getDeclaredField("b");
+            Field fb = Bukkit.getVersion().contains("1.13") ? ppoplhf.getClass().getDeclaredField("footer") : ppoplhf.getClass().getDeclaredField("b");
             fb.setAccessible(true);
             fb.set(ppoplhf, footer);
 
             Object nmsp = player.getClass().getMethod("getHandle", new Class[0]).invoke(player, new Object[0]);
             Object pcon = nmsp.getClass().getField("playerConnection").get(nmsp);
 
-            pcon.getClass().getMethod("sendPacket", new Class[] { getNmsClass("Packet") }).invoke(pcon, new Object[] { ppoplhf });
+            pcon.getClass().getMethod("sendPacket", new Class[]{getNmsClass("Packet")}).invoke(pcon, new Object[]{ppoplhf});
         } catch (Exception exception) {
             exception.printStackTrace();
         }
