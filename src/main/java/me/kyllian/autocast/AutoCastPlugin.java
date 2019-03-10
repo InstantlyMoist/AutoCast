@@ -108,7 +108,11 @@ public class AutoCastPlugin extends JavaPlugin {
     }
 
     public  boolean hasMessagesEnabled(Player player) {
-        return fileHandler.getDataConfiguration().getBoolean(player.getUniqueId().toString());
+        if (fileHandler.getDataConfiguration().get(player.getUniqueId().toString() + ".enabled") == null) {
+            fileHandler.getDataConfiguration().set(player.getUniqueId().toString() + ".enabled", true);
+            fileHandler.saveData();
+        }
+        return fileHandler.getDataConfiguration().getBoolean(player.getUniqueId().toString() + ".enabled");
     }
 
     public Static getaStatic() {

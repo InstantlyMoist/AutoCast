@@ -25,8 +25,6 @@ public class AutoCastCommand implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args) {
-        Player aa = (Player) sender;
-        plugin.getTabList().sendTabList(aa, "&cHello!", "&aBye!");
         if (args.length == 1) { // reload, force, enable/disable, help
             if (args[0].equalsIgnoreCase("help")) {
                 sender.sendMessage(MessageUtils.colorTranslate("&7----------------{ &8&lAutoCast &7}----------------"));
@@ -89,7 +87,7 @@ public class AutoCastCommand implements CommandExecutor {
                     if (sender instanceof Player) {
                         Player player = (Player) sender;
                         sender.sendMessage(plugin.getFileHandler().getSwitchedModeMessage(args[0].equalsIgnoreCase("show") ? "shown" : "hidden"));
-                        plugin.getFileHandler().getDataConfiguration().set(player.getUniqueId().toString(), args[0].equalsIgnoreCase("show") ? true : false);
+                        plugin.getFileHandler().getDataConfiguration().set(player.getUniqueId().toString() + ".enabled", args[0].equalsIgnoreCase("show") ? true : false);
                         plugin.getFileHandler().saveData();
                         plugin.getMessageHandler().setEnabled(args[0].equalsIgnoreCase("show") ? true : false);
                         return true;

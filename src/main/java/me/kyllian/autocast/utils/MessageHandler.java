@@ -37,7 +37,6 @@ public class MessageHandler extends BukkitRunnable {
     public void initializeHandler() {
         interval = plugin.getFileHandler().getConfigurationConfiguration().getInt("BroadcastInterval");
         minimumPlayers = plugin.getFileHandler().getConfigurationConfiguration().getInt("MinimumPlayers");
-        enabled = plugin.getFileHandler().isAutocastEnabled();
         messageList = new ArrayList<>();
         enabledMessages = plugin.getFileHandler().getConfigurationConfiguration().getStringList("EnabledMessages");
         randomOrder = plugin.getFileHandler().getConfigurationConfiguration().getBoolean("RandomOrder");
@@ -71,7 +70,7 @@ public class MessageHandler extends BukkitRunnable {
 
     public void run() {
         // TODO: Add enabled check
-        if (Bukkit.getOnlinePlayers().size() >= minimumPlayers && enabled) sendMessage(false);
+        if (Bukkit.getOnlinePlayers().size() >= minimumPlayers && plugin.getFileHandler().isAutocastEnabled()) sendMessage(false);
     }
 
     public void setEnabled(boolean enabled) {
@@ -94,7 +93,7 @@ public class MessageHandler extends BukkitRunnable {
     public void sendMessage(boolean override) {
         // TODO: Make sure it does them on order, or random.
 
-        if (!enabled && !override) return;
+        if (!plugin.getFileHandler().isAutocastEnabled() && !override) return;
         Message chosenMessage = null;
         if (randomOrder) chosenMessage = messageList.get(ThreadLocalRandom.current().nextInt(0, messageList.size()));
         else {

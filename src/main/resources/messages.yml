@@ -120,24 +120,6 @@ Static: # Static actionbar/bossbar
           - '&7%player_first_join_date% is when you first joined!'
 
 Messages:
-  SpawnEnter: # Message sent spawn enter
-    Text:
-      - '&8&oYou just entered the spawn area!'
-    ClickAction: OPEN_URL
-    Click: ''
-    HoverText: '&7You may find zombies here!'
-    Sound: 'NONE'
-    Permission: 'NONE'
-    Commands: []
-    Title:
-      - '&8&oSpawn;&7Not the safest place to be!'
-    TitleDuration: 10
-    ActionBar: []
-    ActionDuration: 10
-    BossBar: []
-    BossStyle: SEGMENTED_6
-    BossDuration: 10
-    BookPages: []
   OtherJoinMessage: # Message sent on join
     Text:
       - '&7----------------{ &8&lAutoCast &7}----------------'
@@ -158,7 +140,7 @@ Messages:
     BossBar: []
     BossStyle: SEGMENTED_6
     BossDuration: 10
-    BookPages:
+    BookPages: []
   FirstJoinMessage: # Message sent on first join
     Text:
       - '&7----------------{ &8&lAutoCast &7}----------------'
@@ -181,30 +163,6 @@ Messages:
     BossDuration: 10
     BookPages:
       - '["",{"text":"ServerName:","color":"gray","bold":true},{"text":"\nAutoCast welcomes you to the server %player_name%!","color":"gray","bold":false},{"text":"\nPlease read the whole book to gather information about the server!","color":"gray"}]'
-      - '["",{"text":"Rules:","color":"gray"},{"text":" Hover over them to see the consequences!","color":"gray","italic":true},{"text":"\n1. Do not swear!","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a 24 hour mute!","color":"red"}]}},"italic":false},{"text":"\n2. Do not grief","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a pernament ban!","color":"red"}]}}},{"text":"\n3. Do not spam","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, we will mute you for 2 hours","color":"red"}]}}}]'
-      - '["",{"text":"Info: ","color":"gray"},{"text":"\nWe just updated to 1.13","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"This means we now have new blocks!","color":"gray"}]}}},{"text":"\nWe recently installed AutoCast for a better server experience!","color":"gray","clickEvent":{"action":"open_url","value":"https://www.spigotmc.org/resources/autocast.43894/"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can also click on here to be redirected to their download page!","color":"gray"}]}}},{"text":"\nWe just created a new discord server!","color":"gray","clickEvent":{"action":"open_url","value":"https://discord.gg/zgKr2YM"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can join it by clicking on this message!","color":"gray"}]}}}]'
-  OtherJoinMessage: # Message sent on join
-    Text:
-      - '&7----------------{ &8&lAutoCast &7}----------------'
-      - '&7Welcome to the server %player_name%!'
-      - '&7Make sure to vote today!'
-      - '&7Click on this message to join our discord!'
-      - '&7-----------------------------------------'
-    ClickAction: OPEN_URL
-    Click: 'https://discord.gg/zgKr2YM'
-    HoverText: '&7Click here to join the discord\n&7Don''t be scared'
-    Sound: 'RANDOM'
-    Permission: 'NONE'
-    Commands: []
-    Title: []
-    TitleDuration: 10
-    ActionBar: []
-    ActionDuration: 10
-    BossBar: []
-    BossStyle: SEGMENTED_6
-    BossDuration: 10
-    BookPages:
-      - '["",{"text":"ServerName:","color":"gray","bold":true},{"text":"\nAutoCast welcomes you back to the server %player_name%!","color":"gray","bold":false},{"text":"\nPlease read the whole book to gather information about the server!","color":"gray"}]'
       - '["",{"text":"Rules:","color":"gray"},{"text":" Hover over them to see the consequences!","color":"gray","italic":true},{"text":"\n1. Do not swear!","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a 24 hour mute!","color":"red"}]}},"italic":false},{"text":"\n2. Do not grief","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, you will receive a pernament ban!","color":"red"}]}}},{"text":"\n3. Do not spam","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"If you do so, we will mute you for 2 hours","color":"red"}]}}}]'
       - '["",{"text":"Info: ","color":"gray"},{"text":"\nWe just updated to 1.13","color":"gray","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"This means we now have new blocks!","color":"gray"}]}}},{"text":"\nWe recently installed AutoCast for a better server experience!","color":"gray","clickEvent":{"action":"open_url","value":"https://www.spigotmc.org/resources/autocast.43894/"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can also click on here to be redirected to their download page!","color":"gray"}]}}},{"text":"\nWe just created a new discord server!","color":"gray","clickEvent":{"action":"open_url","value":"https://discord.gg/zgKr2YM"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"You can join it by clicking on this message!","color":"gray"}]}}}]'
   CreatorMessage:

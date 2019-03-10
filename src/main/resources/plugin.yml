@@ -1,7 +1,7 @@
 name: AutoCast
 description: Did someone say customization?
 main: me.kyllian.autocast.AutoCastPlugin
-version: 1.024
+version: 1.03
 
 commands:
   autocast:
