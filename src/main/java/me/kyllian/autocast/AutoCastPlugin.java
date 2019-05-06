@@ -18,13 +18,15 @@ public class AutoCastPlugin extends JavaPlugin {
 
     private FileHandler fileHandler;
     private MessageHandler messageHandler;
+    private MySQLHandler mySQLHandler;
+
     public static ActionBar actionBar;
     public static Title title;
     public static BossBar bossBar;
     public static Book book;
     private Static aStatic;
     public boolean isMySQL;
-    private MySQLHandler mySQLHandler;
+
     private UpdateChecker updateChecker;
     private Scoreboard scoreboard;
     private boolean updateCheck;
@@ -78,6 +80,10 @@ public class AutoCastPlugin extends JavaPlugin {
         getCommand("broadcast").setExecutor(new BroadcastCommand(this));
     }
 
+    public void onDisable() {
+        getaStatic().cancel();
+    }
+
     public FileHandler getFileHandler() {
         return fileHandler;
     }
@@ -104,7 +110,9 @@ public class AutoCastPlugin extends JavaPlugin {
                     }
                 }
             }.runTask(AutoCastPlugin.getPlugin(AutoCastPlugin.class));
-        } catch (Exception exc) { }
+        } catch (Exception exc) {
+            exc.printStackTrace();
+        }
     }
 
     public  boolean hasMessagesEnabled(Player player) {

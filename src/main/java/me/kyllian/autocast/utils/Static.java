@@ -62,6 +62,11 @@ public class Static extends BukkitRunnable {
         runTaskTimerAsynchronously(plugin, updateTime, updateTime);
     }
 
+    @Override
+    public void cancel() {
+        super.cancel();
+    }
+
     public void run() {
         if (actionEnabled && plugin.getMessageHandler().actionDone) {
             String chosen;

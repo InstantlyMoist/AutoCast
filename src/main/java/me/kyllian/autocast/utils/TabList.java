@@ -25,10 +25,10 @@ public class TabList {
 
             Object ppoplhf = getNmsClass("PacketPlayOutPlayerListHeaderFooter").getConstructor(new Class[0]).newInstance(new Object[0]);
 
-            Field fa = Bukkit.getVersion().contains("1.13") ? ppoplhf.getClass().getDeclaredField("header") : ppoplhf.getClass().getDeclaredField("a");
+            Field fa = Bukkit.getVersion().contains("1.13") || Bukkit.getVersion().contains("1.14") ? ppoplhf.getClass().getDeclaredField("header") : ppoplhf.getClass().getDeclaredField("a");
             fa.setAccessible(true);
             fa.set(ppoplhf, header);
-            Field fb = Bukkit.getVersion().contains("1.13") ? ppoplhf.getClass().getDeclaredField("footer") : ppoplhf.getClass().getDeclaredField("b");
+            Field fb = Bukkit.getVersion().contains("1.13") || Bukkit.getVersion().contains("1.14") ? ppoplhf.getClass().getDeclaredField("footer") : ppoplhf.getClass().getDeclaredField("b");
             fb.setAccessible(true);
             fb.set(ppoplhf, footer);
 
