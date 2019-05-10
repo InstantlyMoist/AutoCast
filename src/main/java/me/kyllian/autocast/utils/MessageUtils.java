@@ -16,8 +16,9 @@ public class MessageUtils {
         return colorTranslate(string).replace("\\n", "\n");
     }
 
-    public static String motdPrepare(OfflinePlayer player, String string) {
-        return colorTranslate(string).replace("%player_name%", player.getName()).replace("\\n", "\n");
+    public static String motdPrepare(OfflinePlayer player, String message) {
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) message = PlaceholderAPI.setPlaceholders(player, message);
+        return colorTranslate(message).replace("\\n", "\n");
     }
 
     public static String prepareMessage(Player player, String message) {
